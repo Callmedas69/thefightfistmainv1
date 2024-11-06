@@ -14,9 +14,6 @@ import HowtoBuy from "@/components/mainpage/HowtoBuy";
 const HomePage = () => {
   return (
     <div className="relative h-screen">
-      <div className="fixed top-0 inset-x-0 z-50">
-        <NavbarGreen />
-      </div>
       <ScrollToTopButton />
       <div className="flex flex-col gap-0 p-0 m-0">
         <section id="hero" className="p-0 m-0">

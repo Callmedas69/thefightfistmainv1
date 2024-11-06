@@ -9,10 +9,11 @@ import { Menu, X } from "lucide-react";
 
 const navLinks = [
   { title: "HOME", path: "/" },
-  { title: "FIGHT NFT", path: "/commingsoon" },
+  { title: "FIGHT NFT", path: "https://mint.fightfist.io/" },
   { title: "SWAP", path: "/commingsoon" },
   { title: "STAKE", path: "/commingsoon" },
   { title: "ART GALLERY", path: "/commingsoon" },
+  { title: "WHITEPAPER", path: "/whitepaper" },
 ];
 
 const menuVariants = {
@@ -62,7 +63,7 @@ const NavbarGreen = () => {
             />
           </div>
 
-          <div className="hidden md:flex items-center bg-black rounded-3xl px-5 py-1">
+          <div className="border border-slate-400 text-nowrap hidden md:flex items-center bg-black rounded-3xl px-5 py-1">
             {navLinks.map((nav, index) => (
               <div
                 key={index}

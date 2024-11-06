@@ -1,153 +1,110 @@
-import React from "react";
+import * as React from "react";
+
+import background from "@/assets/homepage/TopBG.png";
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+} from "@/components/ui/carousel";
+
+import Paper01 from "@/assets/whitepaper/W_001.jpg";
+import Paper02 from "@/assets/whitepaper/W_002.jpg";
+import Paper03 from "@/assets/whitepaper/W_003.jpg";
+import Paper04 from "@/assets/whitepaper/W_004.jpg";
+import Paper05 from "@/assets/whitepaper/W_005.jpg";
+import Paper06 from "@/assets/whitepaper/W_006.jpg";
+import Paper07 from "@/assets/whitepaper/W_007.jpg";
+import Paper08 from "@/assets/whitepaper/W_008.jpg";
+import Paper09 from "@/assets/whitepaper/W_009.jpg";
+import Paper10 from "@/assets/whitepaper/W_010.jpg";
+import Paper11 from "@/assets/whitepaper/W_011.jpg";
+import Paper12 from "@/assets/whitepaper/W_012.jpg";
 import Image from "next/image";
-import CopyContractAddress from "./CopyContract";
-import { tokenInfo } from "@/app/constants";
-import Uniswap from "@/assets/homepage/uniswap.svg";
-import Link from "next/link";
-import bigLogo from "@/assets/homepage/TTS_Logo_Large.png";
-import NavbarGreen from "./NavbarGreen";
 
-const WhitepaperPage = () => {
+const WP = [
+  {
+    hal: Paper01,
+    title: "page_01",
+  },
+  {
+    hal: Paper02,
+    title: "page_02",
+  },
+  {
+    hal: Paper03,
+    title: "page_03",
+  },
+  {
+    hal: Paper04,
+    title: "page_04",
+  },
+  {
+    hal: Paper05,
+    title: "page_05",
+  },
+  {
+    hal: Paper06,
+    title: "page_06",
+  },
+  {
+    hal: Paper07,
+    title: "page_07",
+  },
+  {
+    hal: Paper08,
+    title: "page_08",
+  },
+  {
+    hal: Paper09,
+    title: "page_09",
+  },
+  {
+    hal: Paper10,
+    title: "page_10",
+  },
+  {
+    hal: Paper11,
+    title: "page_11",
+  },
+  {
+    hal: Paper12,
+    title: "page_12 ",
+  },
+];
+
+export function Whitepaper() {
   return (
-    <div className="relative">
-      <div className="fixed top-0 inset-x-0 z-50">
-        <NavbarGreen />
+    <div className="relative h-screen flex justify-center items-center">
+      {/* Background */}
+      <div className="absolute inset-0 bg-cover bg-center contrast-200 brightness-50 saturate-200 overflow-hidden blur-lg">
+        <Image
+          src={background}
+          alt="background"
+          fill={true}
+          style={{ objectFit: "cover" }}
+        />
       </div>
-      <div className="w-full h-screen flex flex-col">
-        <div className="flex flex-row flex-grow">
-          {/* Left Side - Full Height and Half Width */}
-          <div className="w-1/2 h-full bg-[#120029] text-white flex flex-col justify-center items-center relative">
-            <p className="absolute top-1/4 text-5xl font-bold z-10">
-              WHITEPAPER
-            </p>
-            <p className="absolute top-1/3 text-2xl font-bold z-10">
-              TRUMP&#39;S FIGHT FIST &#40;$TTS&#41;
-            </p>
 
-            <Image
-              src={bigLogo}
-              alt="logo"
-              className="absolute inset-0 p-10 w-full h-full object-cover filter blur-md opacity-30"
-            />
-            <div className="absolute bottom-0 px-5 bg-gray-200 text-black text-xs italic py-3">
-              <p className="font-bold">LEGAL DISCLAIMER</p>
-              <p>
-                PLEASE READ THE ENTIRELY OF THIS “LEGAL DISCLAIMER” SECTION
-                CAREFULLY. NOTHING HEREIN CONSTITUTES LEGAL, FINANCIAL, BUSINESS
-                OR TAX ADVICE AND YOU ARE STRONGLY ADVISED TO CONSULT YOUR OWN
-                LEGAL, FINANCIAL, TAX OR OTHER PROFESSIONAL ADVISOR&#39;S BEFORE
-                ENGAGING IN ANY ACTIVITY IN CONNECTION HERE WITH ANY OF THE
-                PROJECT EARLY CONTRIBUTORS, WHO HAVE WORKED ON THE TFF ECOSYSTEM
-                &#40;AS DEFINED HEREIN&#41; OR PROJECT TO DEVELOP THE TTS
-                ECOSYSTEM IN ANY WAY WHATSOEVER, ANY DISTRIBUTOR AND/OR VENDOR
-                OF TTS TOKENS &#40;OR SUCH OTHER RE-NAMED OR SUCCESSOR TICKER
-                CODE OR NAME OF SUCH TOKENS&#41; &#40;THE DISTRIBUTOR&#41;, NOR
-                ANY SERVICE PROVIDER SHALL BE LIABLE FOR ANY KIND OF DIRECT OR
-                INDIRECT DAMAGE OR LOSS WHATSOEVER WHICH YOU MAY SUFFER IN
-                CONNECTION WITH ACCESSING THE PAPER, DECK OR MATERIAL RELATING
-                TO TTS &#40;THE TOKEN DOCUMENTATION&#41; AVAILABLE ON THE
-                WEBSITE AT FIGHTFIST.COM &#40;THE WEBSITE, INCLUDING ANY
-                SUBDOMAINS THEREON&#41; OR ANY OTHER WEBSITES OR MATERIALS
-                PUBLISHED OR COMMUNICATED BY THE COMPANY OR ITS REPRESENTATIVES
-                FROM TIME TO TIME.
-              </p>
-            </div>
-          </div>
-
-          {/* Right Side */}
-          <div className="w-1/2 h-full flex flex-col justify-center items-start px-20 overflow-auto">
-            <div className="w-[80%] pt-24">
-              <p className="font-bold text-2xl py-5">
-                TTS - Trump&#39;s “FIGHT!” Fist represents:
-              </p>
-              <p className="text-lg py-2">
-                <span className="font-bold">REBEL</span> - against the rigged
-                world, elections, media.
-              </p>
-              <p className="text-lg py-2">
-                <span className="font-bold">DETERMINATION</span> - to do the
-                right thing, no matter the enemies.
-              </p>
-              <p className="text-lg py-2">
-                <span className="font-bold">VICTORY</span> - despite the odds,
-                system against, and the deep state.
-              </p>
-              <p className="text-lg py-2">
-                When you buy Trump&#39;s &#34;FIGHT &#33;&#34; Fist
-                &#40;TTS&#41;, you scream FIGHT, as strong, as loud, and as
-                powerful as Mr. President did when he got shot.
-              </p>
-              <p className="text-lg py-2">
-                TTS token is on the BASE chain where the growing all-American,
-                largest exchange chain is born.
-              </p>
-            </div>
-
-            <div className="py-5">
-              <Link href={tokenInfo[0].tradeUniswap} target="_blank">
-                <div className="relative flex items-center gap-4 p-4 border rounded-3xl bg-indigo-950 text-white shadow-md hover:drop-shadow-xl hover:shadow-fuchsia-400">
-                  <div className="absolute -left-4">
-                    <Image
-                      src={Uniswap}
-                      alt="Uniswap"
-                      className="rounded-full bg-white shadow-lg object-cover"
-                      width={75}
-                      height={75}
-                    />
-                  </div>
-
-                  <div className="ml-16">
-                    <p className="text-lg font-semibold">
-                      Trade TTS at UniSwap.org on Base Chain
-                    </p>
-                  </div>
-                </div>
-              </Link>
-            </div>
-
-            <div className="pt-5">
-              <p className="font-bold text-lg">CONTRACT ADDRESS</p>
-              <p className="flex flex-row text-lg items-center gap-5 pr-5">
-                {tokenInfo[0].contractAddress}
-                <CopyContractAddress
-                  contractAddress={tokenInfo[0].contractAddress}
+      {/* Centered Carousel */}
+      <Carousel className="flex max-w-[90%] md:max-w-[700px] lg:max-w-[1000px] justify-center items-center z-20 relative pt-20 md:pt-32">
+        <CarouselContent>
+          {WP.map((paper, index) => (
+            <CarouselItem key={index}>
+              <div className="px-4 py-8 md:px-16 lg:px-32 md:py-10">
+                <Image
+                  src={paper.hal}
+                  alt={paper.title}
+                  className="rounded-xl"
                 />
-              </p>
-            </div>
-
-            <div className="text-lg pt-5">
-              <span className="font-bold">TICKER</span>: {tokenInfo[0].ticker}
-            </div>
-            <div className="text-lg pt-5">
-              <span className="font-bold">CHAIN</span>: {tokenInfo[0].chain}
-            </div>
-
-            {/* SUPPLY AND TAX */}
-            <div className="grid grid-cols-2 gap-4 mt-4">
-              <div>
-                <p className="font-bold text-lg pt-2">TOTAL SUPPLY</p>
-                <p className="text-lg">{tokenInfo[0].totalSupply}</p>
               </div>
-              <div>
-                <p className="font-bold text-lg pt-2">BUY TAX</p>
-                <p>{tokenInfo[0].buyTax}</p>
-              </div>
-              <div>
-                <p className="font-bold text-lg pt-2">CIRCULATING SUPPLY</p>
-                <p>{tokenInfo[0].circulatingSupply}</p>
-              </div>
-              <div>
-                <p className="font-bold text-lg pt-2">SELL TAX</p>
-                <p>{tokenInfo[0].sellTax}</p>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        {/* Disclaimer */}
-      </div>
+            </CarouselItem>
+          ))}
+        </CarouselContent>
+        <CarouselPrevious />
+        <CarouselNext />
+      </Carousel>
     </div>
   );
-};
-
-export default WhitepaperPage;
+}
