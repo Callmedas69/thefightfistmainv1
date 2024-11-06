@@ -16,33 +16,35 @@ const HomePage = () => {
     <div className="relative h-screen">
       <ScrollToTopButton />
       <div className="flex flex-col gap-0 p-0 m-0">
-        <section id="hero" className="p-0 m-0">
-          <Hero />
-        </section>
-        <section id="scrolling-text" className="p-0 m-0">
-          <VelocityText />
-        </section>
-        <section id="community" className="p-0 m-0">
-          <Community />
-        </section>
-        <section id="naratives" className="p-0 m-0">
-          <Naratives />
-        </section>
-        <section id="whitepaper" className="p-0 m-0">
-          <Whitepaper />
-        </section>
-        <section id="how-to-buy" className="p-0 m-0">
-          <HowtoBuy />
-        </section>
-        <section id="team" className="p-0 m-0">
-          <Team />
-        </section>
-        {/* <section className="p-0 m-0">
+        <div className="absolute top-0 z-0">
+          <section id="hero" className="p-0 m-0">
+            <Hero />
+          </section>
+          <section id="scrolling-text" className="p-0 m-0">
+            <VelocityText />
+          </section>
+          <section id="community" className="p-0 m-0">
+            <Community />
+          </section>
+          <section id="naratives" className="p-0 m-0">
+            <Naratives />
+          </section>
+          <section id="whitepaper" className="p-0 m-0">
+            <Whitepaper />
+          </section>
+          <section id="how-to-buy" className="p-0 m-0">
+            <HowtoBuy />
+          </section>
+          <section id="team" className="p-0 m-0">
+            <Team />
+          </section>
+          {/* <section className="p-0 m-0">
           <FAQ />
         </section> */}
-        <section className="p-0 m-0">
-          <Footer />
-        </section>
+          <section className="p-0 m-0">
+            <Footer />
+          </section>
+        </div>
       </div>
     </div>
   );

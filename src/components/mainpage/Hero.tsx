@@ -28,7 +28,7 @@ const Hero = () => {
   return (
     <div className="relative w-screen h-screen overflow-hidden flex justify-center items-center">
       <div
-        className="absolute inset-0 bg-cover bg-center contrast-200 brightness-50 saturate-200 overflow-hidden"
+        className="absolute inset-0 blur-lg bg-cover bg-center contrast-200 brightness-50 saturate-200 overflow-hidden"
         style={{ backgroundImage: `url(${background.src})` }}
       ></div>
 

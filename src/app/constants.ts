@@ -3,6 +3,12 @@ import twitter from "@/assets/homepage/twitter.png"
 import dextools from "@/assets/homepage/dextools.jpg"
 import tradeUni from "@/assets/homepage/uniswap.svg"
 import dexscreener from "@/assets/homepage/dexscreener.jpg"
+import opensea from "@/assets/homepage/opensea.svg"
+import rarible from "@/assets/homepage/rarible.png"
+import magieden from "@/assets/homepage/magiceden.png"
+
+
+
 
 // TTS INFO
 
@@ -71,5 +77,20 @@ export const socialLink =[
     social:"UNISWAP",
     link:"https://app.uniswap.org/explore/tokens/base/0x7d83b9d9236a97bb3f0d7804e9824445fc483ae1",
     icons:tradeUni,
+  },
+  {
+    social:"OPENSEA",
+    link:"https://opensea.io/collection/the-fight-nft",
+    icons:opensea,
+  },
+  {
+    social:"RARIBLE",
+    link:"https://rarible.com/the-fight-nft/items",
+    icons:rarible,
+  },
+  {
+    social:"MAGIC EDEN",
+    link:"https://magiceden.io/collections/base/0x30287a98f07860abf0f469365a2210b5296fd164",
+    icons:magieden,
   },
 ]
