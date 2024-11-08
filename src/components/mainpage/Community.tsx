@@ -16,18 +16,18 @@ const communityList = [
   {
     title: "Telegram",
     img: telegram,
-    path: "https://t.me/+CjzwzintOdJjNGNi",
+    path: "https://t.me/TrumpsFightFist",
   },
 ];
 
 const Community = () => {
   return (
-    <div className="bg-[#800027] overflow-hidden">
-      <div className="flex flex-col justify-center items-center text-center py-10 px-4 md:px-10">
-        <div className="text-white text-2xl md:text-3xl font-bold">
+    <div className="bg-[#800027] overflow-hidden w-full">
+      <div className="container mx-auto flex flex-col justify-center items-center text-center py-8 px-4 sm:px-6 lg:px-8">
+        <div className="text-white text-xl sm:text-2xl lg:text-3xl font-bold max-w-2xl">
           JOIN THE FIGHT ACROSS X & TG + WIN NFTS
         </div>
-        <div className="flex flex-row gap-5 pt-10 flex-wrap justify-center">
+        <div className="flex flex-wrap justify-center gap-4 sm:gap-6 mt-8">
           {communityList.map((community, index) => (
             <motion.div
               key={index}

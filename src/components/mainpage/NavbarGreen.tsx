@@ -106,7 +106,7 @@ const NavbarGreen = () => {
             animate="open"
             exit="closed"
             variants={menuVariants}
-            className="md:hidden z-40 fixed inset-0 w-full h-full flex flex-col items-center justify-center bg-black/80 overflow-hidden"
+            className="md:hidden z-40 fixed inset-0 w-full h-full flex flex-col items-center justify-center bg-black/90 overflow-hidden"
           >
             <div className="flex flex-col items-center py-5 space-y-4">
               {navLinks.map((nav, index) => (

@@ -8,8 +8,6 @@ import rarible from "@/assets/homepage/rarible.png"
 import magieden from "@/assets/homepage/magiceden.png"
 
 
-
-
 // TTS INFO
 
 export const tokenInfo=[{
@@ -60,7 +58,7 @@ export const socialLink =[
   },
   {
     social:"TELEGRAM",
-    link:"https://t.me/+CjzwzintOdJjNGNi",
+    link:"https://t.me/TrumpsFightFist",
     icons:telegram,
   },
   {
